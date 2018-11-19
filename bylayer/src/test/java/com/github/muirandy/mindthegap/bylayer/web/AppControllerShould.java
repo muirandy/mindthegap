@@ -23,10 +23,6 @@ public class AppControllerShould {
     private AppService AppService;
 
     @Test
-    public void t() {
-        assertTrue(false);
-    }
-    @Test
     public void getDataFromService() {
         AppController appController = new AppController(AppService);
         Data data1 = new DataBuilder().withName("1").build();
