@@ -1,10 +1,7 @@
-package com.github.muirandy.mindthegap.bylayer.web;
+package com.github.muirandy.mindthegap.byfeature.data;
 
 import com.eclipsesource.json.Json;
 import com.eclipsesource.json.JsonArray;
-import com.github.muirandy.mindthegap.bylayer.entities.Data;
-import com.github.muirandy.mindthegap.bylayer.entities.DataBuilder;
-import com.github.muirandy.mindthegap.bylayer.services.AppService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -13,7 +10,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.Arrays;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.BDDMockito.given;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -22,10 +18,6 @@ public class AppControllerShould {
     @Mock
     private AppService AppService;
 
-    @Test
-    public void t() {
-        assertTrue(false);
-    }
     @Test
     public void getDataFromService() {
         AppController appController = new AppController(AppService);
