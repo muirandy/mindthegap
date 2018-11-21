@@ -1,4 +1,4 @@
-package com.github.muirandy.mindthegap.byfeature.data;
+package com.github.muirandy.mindthegap.byfeature.app;
 
 import java.util.Arrays;
 import java.util.List;

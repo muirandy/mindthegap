@@ -1,10 +1,10 @@
-package com.github.muirandy.mindthegap.byfeature.data;
+package com.github.muirandy.mindthegap.byfeature.app;
 
 import org.junit.Test;
 
 import java.util.List;
 
-import static com.github.muirandy.mindthegap.byfeature.data.StoredDataBuilder.aStoredDataBuilder;
+import static com.github.muirandy.mindthegap.byfeature.app.StoredDataBuilder.aStoredDataBuilder;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 public class InMemoryAppRepositoryShould {

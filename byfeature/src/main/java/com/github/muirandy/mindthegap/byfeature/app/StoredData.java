@@ -1,4 +1,4 @@
-package com.github.muirandy.mindthegap.byfeature.data;
+package com.github.muirandy.mindthegap.byfeature.app;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

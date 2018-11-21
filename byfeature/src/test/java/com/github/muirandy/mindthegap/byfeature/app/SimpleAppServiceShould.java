@@ -1,4 +1,4 @@
-package com.github.muirandy.mindthegap.byfeature.data;
+package com.github.muirandy.mindthegap.byfeature.app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,8 +8,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.github.muirandy.mindthegap.byfeature.data.DataBuilder.aDataBuilder;
-import static com.github.muirandy.mindthegap.byfeature.data.StoredDataBuilder.aStoredDataBuilder;
+import static com.github.muirandy.mindthegap.byfeature.app.DataBuilder.aDataBuilder;
+import static com.github.muirandy.mindthegap.byfeature.app.StoredDataBuilder.aStoredDataBuilder;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.mockito.BDDMockito.given;
 
