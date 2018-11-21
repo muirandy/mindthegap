@@ -1,7 +1,5 @@
 package com.github.muirandy.mindthegap.byclean;
 
-import com.tngtech.archunit.core.domain.JavaClasses;
-import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.ArchUnitRunner;
@@ -14,19 +12,24 @@ import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 @AnalyzeClasses(packages = "com.github.muirandy.mindthegap.byclean")
 public class LayersShould {
 
+    private static final String CONTROLLERS = "Web";
+    private static final String USE_CASES = "Services";
+    private static final String GATEWAYS = "Repositories";
+    private static final String ENTITIES = "Entities";
+
     @ArchTest
     public static final ArchRule exhibitCleanArchitecture =
 
         layeredArchitecture()
-                .layer("Web").definedBy("com.github.muirandy.mindthegap.byclean.web..")
-                .layer("Services").definedBy("com.github.muirandy.mindthegap.byclean.services..")
-                .layer("Repositories").definedBy("com.github.muirandy.mindthegap.byclean.repositories..")
-                .layer("Entities").definedBy("com.github.muirandy.mindthegap.byclean.entities..")
+                .layer(CONTROLLERS).definedBy("com.github.muirandy.mindthegap.byclean.controllers..")
+                .layer(USE_CASES).definedBy("com.github.muirandy.mindthegap.byclean.usecases..")
+                .layer(GATEWAYS).definedBy("com.github.muirandy.mindthegap.byclean.gateways..")
+                .layer(ENTITIES).definedBy("com.github.muirandy.mindthegap.byclean.entities..")
 
 
-                .whereLayer("Web").mayNotBeAccessedByAnyLayer()
-                .whereLayer("Repositories").mayNotBeAccessedByAnyLayer()
-//                .whereLayer("Services").mayNotBeAccessedByAnyLayer();
-                .whereLayer("Services").mayOnlyBeAccessedByLayers("Web", "Repositories");
+                .whereLayer(CONTROLLERS).mayNotBeAccessedByAnyLayer()
+                .whereLayer(GATEWAYS).mayNotBeAccessedByAnyLayer()
+//                                .whereLayer(USE_CASES).mayOnlyBeAccessedByLayers(CONTROLLERS);
+                .whereLayer(USE_CASES).mayOnlyBeAccessedByLayers(CONTROLLERS, GATEWAYS);
 
 }
