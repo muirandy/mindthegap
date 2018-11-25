@@ -9,6 +9,8 @@ import java.util.List;
 public class AppController {
 
     private AppUseCase appUseCase;
+//    private StorageGateway storageGateway; // Demo to break the archUnit test!
+
 
     public AppController(AppUseCase appUseCase) {
         this.appUseCase = appUseCase;

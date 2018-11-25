@@ -1,6 +1,7 @@
 package com.github.muirandy.mindthegap.byclean.usecases;
 
 import com.github.muirandy.mindthegap.byclean.entities.Data;
+import com.github.muirandy.mindthegap.byclean.usecases.gateways.StorageGateway;
 
 import java.util.List;
 import java.util.stream.Collectors;

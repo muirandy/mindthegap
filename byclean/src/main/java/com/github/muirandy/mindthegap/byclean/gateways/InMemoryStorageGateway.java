@@ -1,6 +1,6 @@
 package com.github.muirandy.mindthegap.byclean.gateways;
 
-import com.github.muirandy.mindthegap.byclean.usecases.StorageGateway;
+import com.github.muirandy.mindthegap.byclean.usecases.gateways.StorageGateway;
 import com.github.muirandy.mindthegap.byclean.usecases.StoredData;
 
 import java.util.Arrays;

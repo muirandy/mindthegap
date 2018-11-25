@@ -16,6 +16,7 @@ public class LayersShould {
     private static final String USE_CASES = "Services";
     private static final String GATEWAYS = "Repositories";
     private static final String ENTITIES = "Entities";
+    private static final String USE_CASE_GATEWAYS = "Use Case Gateways";
 
     @ArchTest
     public static final ArchRule exhibitCleanArchitecture =
@@ -23,6 +24,7 @@ public class LayersShould {
         layeredArchitecture()
                 .layer(CONTROLLERS).definedBy("com.github.muirandy.mindthegap.byclean.controllers..")
                 .layer(USE_CASES).definedBy("com.github.muirandy.mindthegap.byclean.usecases..")
+                .layer(USE_CASE_GATEWAYS).definedBy("com.github.muirandy.mindthegap.byclean.usecases.gateways..")
                 .layer(GATEWAYS).definedBy("com.github.muirandy.mindthegap.byclean.gateways..")
                 .layer(ENTITIES).definedBy("com.github.muirandy.mindthegap.byclean.entities..")
 
@@ -30,6 +32,7 @@ public class LayersShould {
                 .whereLayer(CONTROLLERS).mayNotBeAccessedByAnyLayer()
                 .whereLayer(GATEWAYS).mayNotBeAccessedByAnyLayer()
 //                                .whereLayer(USE_CASES).mayOnlyBeAccessedByLayers(CONTROLLERS);
-                .whereLayer(USE_CASES).mayOnlyBeAccessedByLayers(CONTROLLERS, GATEWAYS);
+                .whereLayer(USE_CASES).mayOnlyBeAccessedByLayers(CONTROLLERS, GATEWAYS)
+                .whereLayer(USE_CASE_GATEWAYS).mayOnlyBeAccessedByLayers(USE_CASES, GATEWAYS);
 
 }

@@ -2,6 +2,7 @@ package com.github.muirandy.mindthegap.byclean.usecases;
 
 import com.github.muirandy.mindthegap.byclean.entities.Data;
 import com.github.muirandy.mindthegap.byclean.entities.DataBuilder;
+import com.github.muirandy.mindthegap.byclean.usecases.gateways.StorageGateway;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
